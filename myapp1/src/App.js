@@ -2,19 +2,19 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  let title = "hello react;";
-  let list = ["delhi", "calcutta", "mumbai", "pune"];
+  //data menber
+  let title = "event demo";
 
+  let myfun = () => {
+    alert("i am handler");
+  };
   return (
     <div>
       <h1>{title} </h1>
-      <ul>
-        {list.map((item) => {
-          return <li>{item} </li>;
-        })}
-      </ul>
+      <input type="button" value="click me" onClick={myfun} />
     </div>
   );
 }
+
 
 export default App;
