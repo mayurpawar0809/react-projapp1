@@ -1,20 +1,26 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-function App() {
-  //data menber
-  let title = "event demo";
+ function App() {
+  let list =["hello","hello"];
 
-  let myfun = () => {
-    alert("i am handler");
+  const addNewHello = () => {
+    list.push("hello");
+    console.log(list);
   };
+
+
+
+  //view
   return (
     <div>
-      <h1>{title} </h1>
-      <input type="button" value="click me" onClick={myfun} />
+      <h1>workin with event </h1>
+      <input type="button" value="say hello" onClick={addNewHello} />
+      {list.map((item) => {
+        return <h3>{item} </h3>;
+      })}
     </div>
   );
 }
-
 
 export default App;
